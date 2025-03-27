@@ -1,7 +1,7 @@
 import express from 'express';
-import connectDB from './src/config/connectDB.js';
-import userRoutes from './src/routes/userRoutes.js'; // Routes for user profile
-import hackathonRoutes from './src/routes/hackathonRoutes.js'; // New routes for hackathon scraping
+import connectDB from './config/connectDB.js';
+import userRoutes from './routes/userRoutes.js'; // Routes for user profile
+import hackathonRoutes from './routes/hackathonRoutes.js'; // New routes for hackathon scraping
 import cors from 'cors';
 import dotenv from 'dotenv';
 

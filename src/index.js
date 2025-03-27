@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config({ path: "./.env" });
 
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001; // Use Railway's dynamic PORT
 
 app.use(express.json());
 app.use(cors({
@@ -25,4 +25,6 @@ app.use('/api/users', userRoutes); // API route for user profile
 // Hackathon-related routes
 app.use('/api/hackathons', hackathonRoutes); // API route for hackathon scraping and ChatGPT
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => 
+  console.log(`Server running on http://localhost:${PORT}`)
+);
